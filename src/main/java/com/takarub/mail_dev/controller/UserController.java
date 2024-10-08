@@ -19,6 +19,11 @@ public class UserController {
 
     private final UserService userService;
 
+    @GetMapping("/test")
+    public String TestForGitHup(){
+        return "fuck all the world";
+    }
+
     @PostMapping
     public ResponseEntity<HttpResponse> saveUser(@RequestBody User user) {
         User newUser = userService.saveUser(user);
